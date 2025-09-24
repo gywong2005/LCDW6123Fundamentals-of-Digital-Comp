@@ -227,7 +227,19 @@ public:
     }
 };
 /////////////////////////////////////////////////////////////////////////////////////////
-//shuyi//
+
+// GrabCar fare logic
+double calcGrabCarFare(int vehicle, double distance, bool isPeak) {
+    // vehicle: 1=Economy, 2=Premium, 3=6-Seater
+    double base = 0.0, perKm = 0.0;
+    if (vehicle == 1)      { base = 3.0; perKm = 1.4; }
+    else if (vehicle == 2) { base = 5.0; perKm = 2.5; }
+    else                   { base = 6.0; perKm = 2.0; }
+
+    double fare = base + perKm * distance;
+    if (isPeak) fare *= 1.20; // 20% surcharge
+    return fare;
+}
 
 // -------------------- main menu --------------------
 int main() {
