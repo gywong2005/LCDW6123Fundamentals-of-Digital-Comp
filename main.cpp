@@ -26,6 +26,7 @@ bool ValidPhoneNmber(const string& s) {
 bool isValidAmount(double amount) { return amount >= 0.0; }\
 
 ///////////////////////////////////
+//taru//
 
 // -------------------- Account (string account number) --------------------
 class Account {
@@ -46,7 +47,6 @@ public:
     // setters
     void setName(const string& n) { name = n; }
     void setBalance(double b) { balance = b; }
-//----------------------give it another 10-20 then u push again----------------//
     void deposit(double amount) {
         if (amount > 0) balance += amount;
         else cout << "Invalid deposit amount.\n";
@@ -62,14 +62,13 @@ public:
              << " | Balance: RM " << fixed << setprecision(2) << balance << '\n';
     }
 };
-//----------------------give it another 10-20 then u push again----------------//
+
 class Node {
 public:
     Account acc;
     Node* next;
     Node(const Account& a) : acc(a), next(nullptr) {}
 };
-
 
 // -------------------- AccountList (uses string keys) --------------------
 class AccountList {
@@ -201,7 +200,6 @@ public:
 };
 /////////////////////////////////////////////////////////////////////////////////////////
 //shuyi//
-
 
 // -------------------- main menu --------------------
 int main() {
