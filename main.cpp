@@ -7,7 +7,6 @@
 using namespace std;
 
 // Validators
-
 bool isValidName(const string& s) {
     if (s.empty()) return false;
     for (char c : s) {
@@ -226,7 +225,6 @@ public:
         return true;
     }
 };
-/////////////////////////////////////////////////////////////////////////////////////////
 
 // GrabCar fare logic
 double calcGrabCarFare(int vehicle, double distance, bool isPeak) {
